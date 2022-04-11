@@ -1,0 +1,5 @@
+.todoList {
+	padding: var(--base-4) var(--base-8);
+	margin: 0 var(--base-8);
+}
+

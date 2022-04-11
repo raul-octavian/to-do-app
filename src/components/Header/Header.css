@@ -1,0 +1,16 @@
+nav {
+	display: flex;
+	justify-content: flex-start;
+	padding: var(--base-2);
+}
+nav ul {
+	width: 100%;
+	padding-left: 0;
+	display: flex;
+	align-items: center;
+	flex-direction: row;
+	justify-content: space-between;
+}
+nav li {
+	margin-bottom: 0;
+}
