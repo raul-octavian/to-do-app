@@ -5,7 +5,27 @@ import React from 'react'
 // import PropTypes from 'prop-types'
 import './Header.css'
 
-const Header = props => {
+const Header = ({ user }) => {
+  let userNav;
+  if (!user.id) {
+    userNav =
+      <ul>
+        <li>
+          <NavLink to="/login">Login</NavLink>
+        </li>
+        <li>
+          <NavLink to="/register">Register</NavLink>
+        </li>
+      </ul>
+  } else {
+    userNav = <ul>
+      <li>
+        <NavLink to="/">Logout</NavLink>
+      </li>
+    </ul>
+  }
+
+
   return (
     <nav className="glass">
       <ul>
@@ -20,15 +40,7 @@ const Header = props => {
           </ul>
         </li>
         <li>
-          <ul>
-            <li>
-              <NavLink to="/login">Login</NavLink>
-            </li>
-            <li>
-              <NavLink to="/register">Register</NavLink>
-            </li>
-
-          </ul>
+          {userNav}
         </li>
       </ul>
     </nav>

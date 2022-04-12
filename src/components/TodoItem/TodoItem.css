@@ -7,7 +7,32 @@
 .todoItem button {
 	margin-bottom: 0;
 	align-items: center;
-	padding: 0;
+	padding: var(--base-xxs) var(--base-sm);
+}
+.todoItem .button__play {
+	border: 1px solid var(--primary-transparent-focus);
+	background: transparent;
+	color: var(--primary-transparent-focus);
+}
+.todoItem .button__play:hover {
+	border: 1px solid var(--primary-color);
+	color: var(--primary-color);
+}
+
+.todoItem .button__pause {
+	border: 1px solid var(--tertiary-color);
+	background: transparent;
+	color: var(--tertiary-color);
+}
+.todoItem .button__pause:hover {
+	border: 1px solid var(--tertiary-color);
+	color: var(--tertiary-color);
+}
+
+.todoItem .button__complete {
+	border: 1px solid var(--secondary-color);
+	background: transparent;
+	color: var(--secondary-color);
 }
 
 .todoItem p {

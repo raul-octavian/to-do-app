@@ -1,14 +1,17 @@
 
 import './App.css';
-import { Outlet, Link } from "react-router-dom";
+import { Outlet } from "react-router-dom";
+import { useState } from 'react'
 import Header from '../components/Header/Header'
 
 function App() {
+  const [userInfo, setUserInfo] = useState({})
+
   return (
     <div className="App">
-      <Header />
-      <h1>Welcome to React Router!</h1>
-      <Outlet />
+      <Header user={userInfo} />
+      <h1>Welcome to your simple todo app {userInfo?.name}</h1>
+      <Outlet context={[userInfo, setUserInfo]} />
     </div>
   );
 }

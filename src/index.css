@@ -119,7 +119,9 @@ ul {
 li {
 	margin-bottom: var(--base-sm);
 }
-
+span {
+	margin: 0 var(--base-xs);
+}
 .glass {
 	border-radius: var(--base-sm);
 	background: var(--primary-bg-glass);
@@ -216,7 +218,6 @@ button:focus {
 	display: flex;
 	justify-content: flex-start;
 	align-items: center;
-	width: 100%;
 	padding: var(--base-sm) var(--base-xs);
 }
 .icon-button:hover,
@@ -248,6 +249,9 @@ button:focus {
 	margin-right: 0;
 	font-size: var(--base-1);
 }
+.button--float-right {
+	margin-left: auto;
+}
 /* .button--no-text:hover .icon,
 .button--no-text:focus .icon {
 	color: var(--primary-transparent-focus);
@@ -262,7 +266,8 @@ button:focus {
 .container {
 	width: 100%;
 	display: flex;
-	justify-content: center;
+	flex-direction: column;
+	align-items: center;
 	padding: var(--base-4) var(--base-8);
 }
 
@@ -279,6 +284,7 @@ button:focus {
 	transition: all 200ms ease-in-out;
 	border: 1px solid var(--primary-transparent-focus);
 }
+
 form input,
 .form input,
 form textarea,
@@ -289,15 +295,22 @@ form textarea,
 	border: 1px solid var(--primary-transparent);
 	color: var(--primary-color);
 }
+
+.input-section {
+	margin-bottom: var(--base-2);
+}
+
 form label,
 .form label {
 	margin-bottom: var(--base-xs);
 	font-size: var(--base-sm);
+	display: block;
 }
 
 input {
 	width: 100%;
 }
+
 input[type="checkbox"] {
 	width: auto;
 }
@@ -307,7 +320,8 @@ input::placeholder {
 }
 
 textarea {
-	min-height: 100px;
+	min-height: 50px;
+	width: 100%;
 }
 
 .container {
