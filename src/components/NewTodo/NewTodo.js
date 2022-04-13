@@ -27,9 +27,13 @@ const NewTodo = () => {
       })
       const data = await response.json()
 
-      if (!data._id) {
+      if (!data[0]._id) {
         error = data.error
+        return
       }
+      setTitle('');
+      setDescription('')
+
     } catch (err) {
       error = err.message
     }

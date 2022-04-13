@@ -35,6 +35,10 @@
 	color: var(--secondary-color);
 }
 
+.todoItem .todoItem__content {
+  flex-grow: 1;
+}
+
 .todoItem p {
 	margin: 0;
 }
