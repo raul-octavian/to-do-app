@@ -288,7 +288,9 @@ button:focus {
 form input,
 .form input,
 form textarea,
-.form textarea {
+.form textarea,
+.todoItem__content input,
+.todoItem__content textarea {
 	background: transparent;
 	border-radius: var(--base-xs);
 	padding: var(--base-sm);
@@ -296,6 +298,10 @@ form textarea,
 	color: var(--primary-color);
 }
 
+.todoItem__content input,
+.todoItem__content textarea {
+ margin: var(--base-sm) 0;
+}
 .input-section {
 	margin-bottom: var(--base-2);
 }
